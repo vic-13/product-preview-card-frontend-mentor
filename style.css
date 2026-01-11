@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-background: hsl(30, 38%, 92%);
+    --color-white: white;
+    --text-color: hsl(228, 12%, 48%);
+    --color-price: hsl(158, 36%, 37%);
+    --color-button: hsl(158, 42%, 18%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Montserrat, serif;
+    background-color: var(--color-background);
+    font-size: 1.4rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 3rem auto;
+    padding: 0 3rem;
+}
+
+.grid {
+    max-width: 70rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--color-white);
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+
+.image-container img {
+    max-width: 100%;
+    display: inherit;
+}
+
+.card-contents {
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category {
+    letter-spacing: 0.3rem;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.product-name {
+    font-family: Fraunces;
+    font-size: 3.4rem;
+    line-height: 1em;
+}
+
+.product-description {
+    color: var(--text-color);
+    line-height: 1.6em;
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+}
+
+.new-price {
+    font-family: fraunces, serif;
+    color: var(--color-price);
+    font-size: 2.5em;
+    font-weight: bold;
+    padding-right: 2.5rem;
+}
+
+.old-price {
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--color-price);
+    border: none;
+    padding: 1.4rem 0;
+    border-radius: 1.2rem;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-button);
+    cursor: pointer;
+}
+
+button img {
+    padding-right: 0.7rem;
+}
+
+@media only screen and (max-width: 39.3rem) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-container img {
+        max-height: 45rem;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-contents {
+        display: block;
+    }
+
+    .product-description, .category, .product-name, .price-section {
+        padding-bottom: 2.3rem;
+    }
+}
+
+@media only screen and (max-width: 23.44rem) {
+    html {
+        font-size: 50%;
+    }
+
+    .container {
+        margin: 1.5rem auto;
+        padding: 0 1.5rem;
+    }
+
+    .image-container img {
+        max-height: 29rem;
+    }
+}
