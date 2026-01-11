@@ -1,4 +1,4 @@
-/+# Frontend Mentor - Product preview card component
+ Frontend Mentor - Product preview card component
 This project is a simple product card which helps to reinforce knowledge on layouts using css grid and flexbox
 
 ### Links
